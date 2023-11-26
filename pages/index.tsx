@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -9,15 +10,16 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header>
+     
+            <header className="home_header">
         <img src="/logo.svg" alt="logo Disney" className="logo" />
 
-        <button type="button" className="btnlogin">
+        <Link href={"/user"} type="button" className="btnlogin">
           Login
-        </button>
+        </Link>
       </header>
 
-      <main className={"index_main"}>
+      <main className="home_main">
 
         <section className="get">
 
@@ -36,8 +38,9 @@ export default function Home() {
           <img src="/cta-logo-two.png" className="logo_plus"  />
 
         </section>
-        
+
       </main>
+     
     </>
   );
 }
