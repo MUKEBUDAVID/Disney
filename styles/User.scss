@@ -89,9 +89,10 @@
       align-items: center;
       justify-content: center;
       position: relative;
+      cursor: pointer;
     }
 
-    .user_aside a {
+    .user_aside .Navlink {
       opacity: 0.6 !important;
       color: white;
       text-decoration: none;
@@ -106,7 +107,13 @@
       margin-left: 10px;
       // font-family: __Inter_9d0077;
     }
-    .user_aside svg {
+    .user_aside .active{
+      color: white;
+        opacity: 1 !important;
+        transform: scale(1.5) !important;
+    }
+
+    .user_aside .NavSvg {
       width: 1.5rem;
       height: 1.5rem;
       // fill: white;
@@ -114,6 +121,14 @@
       border: 0 solid #e5e7eb;
       opacity: 0.6;
       transition: 300ms ease-in-out;
+    }
+    .user_aside .SvgActive {
+      width: 1.5rem;
+      height: 1.5rem;
+      fill: white;
+      color: white;
+      border: 0 solid #e5e7eb;
+     
     }
 
     @for $i from 1 through 5 {
@@ -124,7 +139,7 @@
         transform: scale(1.8);
       }
 
-      .user_aside nav li:hover:nth-child(#{$i}) a {
+      .user_aside nav li:hover:nth-child(#{$i}) .Navlink  {
         color: white;
         opacity: 1 !important;
         transform: scale(1.5) !important;

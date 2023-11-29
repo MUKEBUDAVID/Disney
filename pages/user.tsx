@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import Aside from "../components/aside";
+import Aside from "../components/layout/aside";
 
 
 function User() {

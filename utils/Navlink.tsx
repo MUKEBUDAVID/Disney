@@ -1,40 +1,36 @@
-import React, { useState,PropsWithChildren, useEffect } from "react";
-import { useRouter } from 'next/router';
-import Link from 'next/link';
+import React, { useState, PropsWithChildren, useEffect } from "react";
+import { useRouter } from "next/router";
+import Link from "next/link";
+
+type NavLinkProps = PropsWithChildren<{
+  href: string;
+  id: string;
+  varclas: [string, Function];
+}>;
+
+function Navlink({ href, id, varclas, children }: NavLinkProps) {
+  const [varclass, setvarclass] = varclas;
+  const { pathname } = useRouter();
+  console.log(pathname);
 
 
-
-type NavLinkProps = PropsWithChildren<
-{  href:string,
-    id?: string,
-    
-  }
->;
-
-
-
-function Navlink({ href, id, children}) {
-    const [varclas,setvarclas]=useState("");
-    const { pathname } = useRouter();
-
-useEffect(()=>{
     if (pathname === href) {
-        setvarclas("active") ;
-    }else{
-        setvarclas(id);
+      setvarclass("active");
+
+
+      
+      console.log(varclass);
+      
+    } else {
+      setvarclass("Navlink");
     }
+  
 
-
-},[pathname])
-
-
-   
   return (
-    <Link href={href} id={varclas}>
-   {children}
-</Link>
-    
-  )
+    <Link href={href} id={id} className={varclass}>
+      {children}
+    </Link>
+  );
 }
 
-export default Navlink
+export default Navlink;
