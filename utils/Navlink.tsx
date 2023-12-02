@@ -3,18 +3,18 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 
 type NavLinkProps = PropsWithChildren<{
-  href: string;
-  id: string;
+  hreF: any;
+  iD: any;
   varclas: [string, Function];
 }>;
 
-function Navlink({ href, id, varclas, children }: NavLinkProps) {
+function Navlink({ hreF, iD, varclas, children }: NavLinkProps) {
   const [varclass, setvarclass] = varclas;
   const { pathname } = useRouter();
   console.log(pathname);
 
 
-    if (pathname === href) {
+    if (pathname === hreF) {
       setvarclass("active");
 
 
@@ -27,7 +27,7 @@ function Navlink({ href, id, varclas, children }: NavLinkProps) {
   
 
   return (
-    <Link href={href} id={id} className={varclass}>
+    <Link href={hreF} id={iD} className={varclass}>
       {children}
     </Link>
   );
