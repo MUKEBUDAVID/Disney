@@ -111,6 +111,15 @@
       color: white;
         opacity: 1 !important;
         transform: scale(1.5) !important;
+        font-size: 18px;
+      line-height: 28px;
+      font-weight: 400;
+      position: absolute;
+      top: 0px;
+      left: 80%;
+      text-decoration: none;
+      margin-left: 20px;
+      transition: 300ms ease-in-out;
     }
 
     .user_aside .NavSvg {
@@ -122,12 +131,13 @@
       opacity: 0.6;
       transition: 300ms ease-in-out;
     }
-    .user_aside .SvgActive {
+    #SvgActive {
       width: 1.5rem;
       height: 1.5rem;
       fill: white;
       color: white;
       border: 0 solid #e5e7eb;
+      opacity: 1;
      
     }
 
@@ -144,24 +154,24 @@
         opacity: 1 !important;
         transform: scale(1.5) !important;
       }
-
-      .user_aside nav li:hover:nth-child(#{$i}) .ombre {
-        display: block;
+      .user_aside nav li:hover:nth-child(#{$i})  .active  {
+        color: white;
+        opacity: 1 !important;
+        transform: scale(1.9) !important;
       }
+
+     
     }
 
 
-
+    // .user_aside nav:hover  .ombre {
+    //   display: block;
+    // }
+    
     #ombreblock {
       display: block;
     }
-
-    // .user_aside nav:hover a {
-    //   display: block;
-    //   transform: scale(1.1);
-    //   animation: fadeInLeft;
-    //   animation-duration: 500ms;
-    // }
+    
 
     #fadeIn {
       display: block;

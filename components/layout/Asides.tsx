@@ -2,21 +2,22 @@ import React, { MouseEvent, useState } from "react";
 import ListAside from "../molecule/ListAside";
 
 function Asides() {
-  const [id, setid] = useState("");
-  const [styl, setstyl] = useState({ display: "none" });
+  const [animationFade, setanimationFade] = useState("");
   const [isvisible, setisvisible] = useState(false);
   const [idOmbre, setidOmbre] = useState("");
 
   const handeleOver = (e: MouseEvent) => {
     if (isvisible == false) {
-      setstyl({ display: "block" });
+      setanimationFade("fadeIn");
       setisvisible(true);
+      setidOmbre("ombreblock")
     }
   };
   const handeleOut = (e: MouseEvent) => {
     if (isvisible == true) {
-      setstyl({ display: "none" });
+      setanimationFade("fadeOut");
       setisvisible(false);
+      setidOmbre("")
     }
   };
 
@@ -102,8 +103,8 @@ function Asides() {
                 methode={{ handeleOver }}
                 href={ele.href}
                 titles={ele.title}
-                id={id}
-                handele={{ isvisible, setisvisible, setstyl }}
+                animationFade={animationFade}
+                handele={{ isvisible, setisvisible  }}
               >
                 {ele.Path}
               </ListAside>

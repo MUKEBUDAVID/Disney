@@ -4,30 +4,32 @@ import Link from "next/link";
 
 type NavLinkProps = PropsWithChildren<{
   hreF: any;
-  iD: any;
+  animationFades: any;
   varclas: [string, Function];
+  setsvgActive:Function
 }>;
 
-function Navlink({ hreF, iD, varclas, children }: NavLinkProps) {
+function Navlink({ hreF, animationFades, varclas,setsvgActive, children }: NavLinkProps) {
   const [varclass, setvarclass] = varclas;
   const { pathname } = useRouter();
-  console.log(pathname);
 
 
     if (pathname === hreF) {
       setvarclass("active");
+     console.log(pathname);
+     console.log(hreF);
+     
+     
+      setsvgActive("SvgActive")
 
-
-      
-      console.log(varclass);
-      
     } else {
       setvarclass("Navlink");
+      setsvgActive("")
     }
   
 
   return (
-    <Link href={hreF} id={iD} className={varclass}>
+    <Link href={hreF} id={animationFades} className={varclass}>
       {children}
     </Link>
   );
