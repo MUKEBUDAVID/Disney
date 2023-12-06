@@ -2,12 +2,15 @@
   .user_header {
     width: calc(100vw - 100px);
     height: 50px;
-    background-color: rgb(17, 17, 20);
+    background-color: #111114;
+    // background-color: rgb(28, 28, 226);
     display: flex;
     flex-direction: column;
     align-items: end;
     justify-content: space-around;
-    margin-left: 100px;
+     margin-left: 100px;
+     position: absolute;
+
 
     .avatar {
       width: 40px;
@@ -26,19 +29,22 @@
     // background-color: rgb(111, 111, 252);
     overflow-y: scroll;
 
+    /* 
+    DEbut de aside
+    */
+
     .user_aside {
       width: 100px;
       height: 100vh;
       //  background-color: red;
       background-color: rgb(17, 17, 20);
-      position: absolute;
-      top: 0px;
-      left: 0px;
+      position: fixed;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       z-index: 10;
+      margin-top: 0px;
     }
 
     .user_aside img{
@@ -118,6 +124,7 @@
       top: 0px;
       left: 80%;
       text-decoration: none;
+      display: none;
       margin-left: 20px;
       transition: 300ms ease-in-out;
     }
@@ -164,10 +171,6 @@
     }
 
 
-    // .user_aside nav:hover  .ombre {
-    //   display: block;
-    // }
-    
     #ombreblock {
       display: block;
     }
@@ -215,10 +218,6 @@
       }
     }
 
-
-
-
-
     @keyframes fadeOutLeft {
       from {
         opacity: 1;
@@ -234,5 +233,114 @@
         transform: translateX(-50%);
       }
     }
-  }
+
+
+
+
+/* 
+Debut du Srolling
+*/
+
+.Srolling{
+  width: calc(100vw - 100px );
+  height: calc(100vh - 80px );
+  background-color: transparent;
+  margin-top: 52px;
+  margin-left: 100px;
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow-x: hidden;
+ 
 }
+
+.slider{
+width:450vw;
+height: 350px;
+margin-top: 10px;
+// background-color:red;
+display: flex;
+flex-direction: row;  
+align-items: center;
+justify-content: center;
+box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
+rgb(0 0 0 / 73%) 0px 16px 10px -10px;
+
+}
+
+
+.slider div{
+  width: 80vw;
+  height: 350px;
+  display: block;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+}
+
+@for $i from 1 through 4 {
+  .slider img:hover:nth-child(#{$i}){
+    padding: 0;
+    outline: 2px solid;
+    transition-duration: 300ms; 
+   
+  }
+  
+
+}
+
+
+.slider img{
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+ 
+
+  }
+
+  .slider  button{
+    opacity: 0;
+    height: 100%;
+    width: 5vw;
+    z-index: 1;
+  }
+
+  .slider button:hover {
+    opacity: 1;
+    transition: opacity 0.2s ease 0s;
+  }
+  .slick-dots li button{
+    opacity: 1;
+  }
+
+  .slider .slick-dots li button:before {
+      font-size: 10px;
+      color: rgb(150, 158, 171);
+      margin-top: 20px;
+    }
+
+    .slider li.slick-active button:before {
+      color: white;
+    }
+
+    .slider  .slick-list {
+      overflow: initial;
+    }
+    .slider    .slick-prev {
+      left: -75px;
+    }
+  
+    .slider  .slick-next {
+      right: -75px;
+    }
+  
+
+
+}
+
+}
+
+
+
+

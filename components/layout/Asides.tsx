@@ -31,7 +31,8 @@ function Asides() {
         ></path>
       ),
       href: "/user",
-      title: "Home",
+      title: "Home"
+     
     },
     {
       Path: (
@@ -97,7 +98,7 @@ function Asides() {
             handeleOver(e);
           }}
         >
-          {list.map((ele: any) => {
+          {list.map((ele: any,index:number) => {
             return (
               <ListAside
                 methode={{ handeleOver }}
@@ -105,6 +106,7 @@ function Asides() {
                 titles={ele.title}
                 animationFade={animationFade}
                 handele={{ isvisible, setisvisible  }}
+                index={index}
               >
                 {ele.Path}
               </ListAside>

@@ -1,4 +1,4 @@
-import React,{useState,PropsWithChildren, FunctionComponent, ReactComponentElement} from "react";
+import React,{useState,PropsWithChildren} from "react";
 import Navlink from "../../utils/Navlink";
 
 type listProps = PropsWithChildren<{
@@ -15,11 +15,12 @@ type listProps = PropsWithChildren<{
   setisvisible:Function,
   
  },
- titles:String
+ titles:String,
+ index:number
  
 }>;
 
-function ListAside({methode,href,animationFade,titles,children  }:listProps) {
+function ListAside({methode,href,animationFade,titles,index,children  }:listProps) {
 
 const [svgActive,setsvgActive]=useState("SvgActive");
 const [varclass,setvarclass]=useState("active");
@@ -31,7 +32,7 @@ const{handeleOver}=methode;
 
 
   return (
-    <li onMouseEnter={(e)=>{handeleOver(e)}} >
+    <li onMouseEnter={(e)=>{handeleOver(e)}} key={index} >
   <svg xmlns="http://www.w3.org/2000/svg" className={"NavSvg"} id={svgActive} fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" >
 {children}
   </svg>

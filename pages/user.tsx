@@ -1,7 +1,8 @@
 import React from "react";
 import Head from "next/head";
 import Aside from "../components/layout/Asides";
-
+import Header from "../components/layout/Header";
+import Scrolling from "../components/molecule/Scrolling";
 
 function User() {
   return (
@@ -12,12 +13,12 @@ function User() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header className="user_header">
-        <div className="avatar"></div>
-
-      </header>
+      <Header/>
       <main className="user_main">
      <Aside/>
+   <Scrolling/>
+     
+
 
 
 
