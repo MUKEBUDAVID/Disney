@@ -3,14 +3,13 @@
     width: calc(100vw - 100px);
     height: 50px;
     background-color: #111114;
-    // background-color: rgb(28, 28, 226);
     display: flex;
     flex-direction: column;
     align-items: end;
     justify-content: space-around;
-     margin-left: 100px;
-     position: absolute;
-
+    margin-left: 100px;
+    position: fixed;
+    z-index: 200;
 
     .avatar {
       width: 40px;
@@ -25,8 +24,7 @@
     width: 100vw;
     height: 100vh;
     background-image: url("../public/home-background.png");
-    // background-image: url("../public/slider-scale.jpg");
-    // background-color: rgb(111, 111, 252);
+
     overflow-y: scroll;
 
     /* 
@@ -47,10 +45,10 @@
       margin-top: 0px;
     }
 
-    .user_aside img{
+    .user_aside img {
       width: 70px;
       height: 70px;
-      transform:translateY(-50px) ;
+      transform: translateY(-50px);
     }
 
     .user_aside nav {
@@ -113,11 +111,11 @@
       margin-left: 10px;
       // font-family: __Inter_9d0077;
     }
-    .user_aside .active{
+    .user_aside .active {
       color: white;
-        opacity: 1 !important;
-        transform: scale(1.5) !important;
-        font-size: 18px;
+      opacity: 1 !important;
+      transform: scale(1.5) !important;
+      font-size: 18px;
       line-height: 28px;
       font-weight: 400;
       position: absolute;
@@ -145,7 +143,6 @@
       color: white;
       border: 0 solid #e5e7eb;
       opacity: 1;
-     
     }
 
     @for $i from 1 through 5 {
@@ -156,51 +153,42 @@
         transform: scale(1.8);
       }
 
-      .user_aside nav li:hover:nth-child(#{$i}) .Navlink  {
+      .user_aside nav li:hover:nth-child(#{$i}) .Navlink {
         color: white;
         opacity: 1 !important;
         transform: scale(1.5) !important;
       }
-      .user_aside nav li:hover:nth-child(#{$i})  .active  {
+      .user_aside nav li:hover:nth-child(#{$i}) .active {
         color: white;
         opacity: 1 !important;
         transform: scale(1.9) !important;
       }
-
-     
     }
-
 
     #ombreblock {
       display: block;
     }
-    
 
     #fadeIn {
       display: block;
       // animation: fadeInLeft;
       animation-duration: 300ms;
       animation-iteration-count: 1;
-      animation-fill-mode:forwards;
-      animation-delay:100ms;
-     
-
+      animation-fill-mode: forwards;
+      animation-delay: 100ms;
     }
     #fadeOut {
       display: block;
       animation: fadeOutLeft;
       animation-duration: 300ms;
       animation-iteration-count: 1;
-      animation-fill-mode:forwards;
-      animation-delay:100ms;
-
+      animation-fill-mode: forwards;
+      animation-delay: 100ms;
     }
 
     .user_aside nav:hover svg {
       transform: scale(1.3);
     }
-
-   
 
     @keyframes fadeInLeft {
       from {
@@ -234,87 +222,75 @@
       }
     }
 
-
-
-
-/* 
+    /* 
 Debut du Srolling
 */
 
-.Srolling{
-  width: calc(100vw - 100px );
-  height: calc(100vh - 80px );
-  background-color: transparent;
-  margin-top: 52px;
-  margin-left: 100px;
-  color: white;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  overflow-x: hidden;
- 
-}
+    .Srolling {
+      width: calc(100vw - 100px);
+      height: calc(200vh - 80px);
+      background-color: transparent;
+      margin-top: 52px;
+      margin-left: 100px;
+      color: white;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
 
-.slider{
-width:450vw;
-height: 350px;
-margin-top: 10px;
-// background-color:red;
-display: flex;
-flex-direction: row;  
-align-items: center;
-justify-content: center;
-box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
-rgb(0 0 0 / 73%) 0px 16px 10px -10px;
+    .slider {
+      width: 450vw;
+      height: 350px;
+      margin-top: 10px;
+      // background-color:red;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
+        rgb(0 0 0 / 73%) 0px 16px 10px -10px;
+    }
 
-}
+    .slider div {
+      width: 80vw;
+      height: 350px;
+      display: block;
+      border-radius: 4px;
+      cursor: pointer;
+      position: relative;
+    }
 
+    @for $i from 1 through 4 {
+      .slider img:hover:nth-child(#{$i}) {
+        padding: 0;
+        outline: 2px solid;
+        transition-duration: 200ms;
+      }
+    }
 
-.slider div{
-  width: 80vw;
-  height: 350px;
-  display: block;
-  border-radius: 4px;
-  cursor: pointer;
-  position: relative;
-}
+    .slider img {
+      width: 100%;
+      height: 100%;
+      padding: 4px;
+    }
 
-@for $i from 1 through 4 {
-  .slider img:hover:nth-child(#{$i}){
-    padding: 0;
-    outline: 2px solid;
-    transition-duration: 300ms; 
-   
-  }
-  
+    .slider button {
+      opacity: 0;
+      height: 100%;
+      width: 5vw;
+      z-index: 1;
+    }
 
-}
+    .slider button:hover {
+      opacity: 1;
+      transition: opacity 0.2s ease 0s;
+    }
+    .slick-dots li button {
+      opacity: 1;
+    }
 
-
-.slider img{
-  width: 100%;
-  height: 100%;
-  padding: 2px;
- 
-
-  }
-
-  .slider  button{
-    opacity: 0;
-    height: 100%;
-    width: 5vw;
-    z-index: 1;
-  }
-
-  .slider button:hover {
-    opacity: 1;
-    transition: opacity 0.2s ease 0s;
-  }
-  .slick-dots li button{
-    opacity: 1;
-  }
-
-  .slider .slick-dots li button:before {
+    .slider .slick-dots li button:before {
       font-size: 10px;
       color: rgb(150, 158, 171);
       margin-top: 20px;
@@ -324,23 +300,75 @@ rgb(0 0 0 / 73%) 0px 16px 10px -10px;
       color: white;
     }
 
-    .slider  .slick-list {
+    .slider .slick-list {
       overflow: initial;
     }
-    .slider    .slick-prev {
+    .slider .slick-prev {
       left: -75px;
     }
-  
-    .slider  .slick-next {
+
+    .slider .slick-next {
       right: -75px;
     }
-  
+
+    /* 
+Debut du Viewers
+*/
+
+    .Viewers {
+      width: 85vw;
+      height: 120px;
+      margin-top: 30px;
+      padding: 30px 0px 26px;
+      display: grid;
+      grid-gap: 25px;
+      gap: 25px;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      // background-color: #e5e7eb;
+    }
+
+    .Viewers div {
+      border-radius: 10px;
+      box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
+        rgb(0 0 0 / 73%) 0px 16px 10px -10px;
+      cursor: pointer;
+      overflow: hidden;
+      position: relative;
+      transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+      border: 3px solid rgba(249, 249, 249, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+    }
+
+    .Viewers img {
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+    .Viewers video {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0px;
+      opacity: 0;
+      z-index: 0;
+    }
 
 
+    .Viewers div:hover  {
+      box-shadow: rgb(0 0 0 / 80%) 0px 40px 58px -16px,
+      rgb(0 0 0 / 72%) 0px 30px 22px -10px;
+
+    transform: scale(1.05);
+    border-color: rgba(249, 249, 249, 0.8);
+
+  }
+
+
+  .Viewers div:hover video {
+    opacity: 1;
 }
-
 }
-
-
-
-
+}
