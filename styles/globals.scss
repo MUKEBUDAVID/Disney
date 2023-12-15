@@ -1,6 +1,6 @@
 @import "./variable";
 @import "./App";
-@import "./User";
+@import "./user/User.scss";
 
 
 
@@ -13,7 +13,7 @@
   body {
     width: 100vw;
     height:100vh;
-    // background: #080808;
+    background: #080808;
     font-family: Avenir-Roman, sans-serif;
     overflow: hidden; 
     // color: white;
@@ -43,7 +43,7 @@
 
 }
 
-@media screen and  (min-width:map-get($breakpoint, Tablet) ) and (max-width:1024px) {
+@media screen and  (min-width:map-get($breakpoint, Tablet) ) and (max-width:1023px) {
 
   body {
     margin: 0px;
@@ -51,6 +51,8 @@
     // height: 120vh;
     height: 100vh;
     overflow: hidden; 
+    background: #080808;
+
 
    
 
@@ -68,6 +70,8 @@
     width: 100vw;
     height: 100vh;
     overflow: hidden; 
+    background: #080808;
+
   }
 }
 

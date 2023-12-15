@@ -7,22 +7,25 @@ import Recommends from "../atom/Recommends";
 function Srolling() {
   return (
     <section className="Srolling">
-        <Slider/>
+      <Slider />
 
-       <Viewers/>
+      <Viewers />
 
-    <div className="gridRecommend">
-      <Recommends/>
-      <Recommends/>
-      <Recommends/>
-      <Recommends/>
-      <Recommends/>
-      <Recommends/>
+      <div className="gridRecommend">
+        <Recommends title={"Disney Originals"} />
 
-      </div>   
-    
+        <Recommends title={"Popular Movies"} />
+
+        <Recommends title={"Popular Series"} />
+
+        <Recommends title={"New to Disney+"} />
+
+        <Recommends title={"Featured Marvel"} />
+
+        <Recommends title={"Best of Pixar"} />
+      </div>
     </section>
-  )
+  );
 }
 
-export default Srolling  
+export default Srolling;

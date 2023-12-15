@@ -1,7 +1,16 @@
-import React from "react";
+import React,{PropsWithChildren} from "react";
 import Slider from "react-slick";
+import { LazyLoadImage}from "react-lazy-load-image-component";
+  import "react-lazy-load-image-component/src/effects/blur.css";
 
-function Recommends() {
+
+type RecommendProps=PropsWithChildren<{
+  title:String,
+}>
+
+
+function Recommends({title}:RecommendProps) {
+ 
 
   const settings = {
     dots: true,
@@ -38,68 +47,79 @@ function Recommends() {
     ]
   };
 
+const test=[{
+  src:"./foot.webp",
+  alt:"david",
+  
+},
+{
+  src:"./foot.webp",
+  alt:"david",
+  
+},{
+  src:"./foot.webp",
+  alt:"david"
+},{
+  src:"./foot.webp",
+  alt:"david"
+},{
+  src:"./foot.webp",
+  alt:"david"
+},{
+  src:"./foot.webp",
+  alt:"david"
+},{
+  src:"./foot.webp",
+  alt:"david"
+},{
+  src:"./foot.webp",
+  alt:"david"
+},{
+  src:"./foot.webp",
+  alt:"david"
+},{
+  src:"./foot.webp",
+  alt:"david"
+},{
+  src:"./foot.webp",
+  alt:"david"
+},{
+  src:"./foot.webp",
+  alt:"david"
+},{
+  src:"./foot.webp",
+  alt:"david"
+},{
+  src:"./foot.webp",
+  alt:"david"
+},{
+  src:"./foot.webp",
+  alt:"david"
+},
 
+]
 
   return (
     <section className="recommend">
      <div>        
-      <h2> Responsive </h2>
+      <h2> {title}</h2>
         <Slider {...settings}>
-          <div>
-            <img src="./foot.webp" alt=""  />
-          </div>
-          <div>
-          <img src="./foot.webp" alt=""  />
-
-          </div>
-          <div>
-          <img src="./foot.webp" alt=""  />
-
-          </div>
-          <div>
-          <img src="./foot.webp" alt=""  />
-
-          </div>
-          <div>
-          <img src="./foot.webp" alt=""  />
-
-          </div>
-          <div>
-          <img src="./foot.webp" alt=""  />
-
-          </div>
-          <div>
-          <img src="./foot.webp" alt=""  />
-
-          </div>
-
-          <div>
-            <img src="./foot.webp" alt=""  />
-          </div>
-          <div>
-          <img src="./foot.webp" alt=""  />
-
-          </div>
-          <div>
-          <img src="./foot.webp" alt=""  />
-
-          </div>
-          <div>
-          <img src="./foot.webp" alt=""  />
-
-          </div>
-          <div>
-          <img src="./foot.webp" alt=""  />
-
-          </div>
-          <div>
-          <img src="./foot.webp" alt=""  />
-
-          </div>
-          <div>
-          <img src="./foot.webp" alt=""  />
-
-          </div>
+          {
+          test.map((image,index)=>{
+            return(
+              <div>
+                <LazyLoadImage
+                src={image.src}
+                alt={image.alt}
+                effect="blur"
+                key={index}
+                />
+            </div>
+            )
+          })  
+          }
+         
+         
 
          
         </Slider>

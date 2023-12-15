@@ -43,7 +43,7 @@
     .home_main{
     width: 100vw;
     height: 100vh;
-    background-image: url("../public/login-background.jpg") ;
+    background-image: url("/login-background.jpg") ;
     background-size: cover;
     overflow: hidden; 
     display: flex;
@@ -124,7 +124,7 @@
 
 
 
-   @media screen and  (min-width:map-get($breakpoint, Tablet) ) and (max-width:1024px) {
+   @media screen and  (min-width:map-get($breakpoint, Tablet) ) and (max-width:1023px) {
     header{
         width: 100vw;
         height: 70px;
@@ -175,7 +175,7 @@
     .index_main{
     width: 100vw;
     height: 100vh;
-    background-image: url("../public/login-background.jpg") ;
+    background-image: url("/login-background.jpg") ;
     background-size: cover;
     overflow: hidden; 
     display: flex;
@@ -299,7 +299,7 @@
     .index_main{
     width: 100vw;
     height: 100vh;
-    background-image: url("../public/login-background.jpg") ;
+    background-image: url("/login-background.jpg") ;
     background-size: cover;
     overflow: hidden; 
     display: flex;

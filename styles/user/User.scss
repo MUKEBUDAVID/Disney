@@ -1,0 +1,254 @@
+@import"./aside.scss";
+@import"./slider.scss";
+@import"./viewers.scss";
+@import "./recommend.scss";
+
+@media screen and (min-width: map-get($breakpoint, Desktop)) {
+  .user_header {
+    width: calc(100vw - 100px);
+    height: 50px;
+    background-color: #111114;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-around;
+    margin-left: 100px;
+    position: fixed;
+    z-index: 200;
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: white;
+      margin-right: 50px;
+    }
+  }
+
+  .user_main {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/home-background.png");
+
+    overflow-y: scroll;
+
+    /* 
+    DEbut de aside
+    */
+   
+   
+    /* 
+Debut du Srolling
+*/
+
+    .Srolling {
+      width: calc(100vw - 100px);
+      height: calc(400vh - 80px);
+      background-color:transparent;
+      margin-top: 52px;
+      margin-left: 100px;
+      color: white;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+   /* 
+Debut du slider
+*/
+
+
+
+    /* 
+Debut du Viewers
+*/
+
+   
+
+
+/* 
+    DEbut de Recommends
+    */
+.gridRecommend{
+  // background-color: red;
+  width: 100%;
+  height: 200vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+}
+
+
+}
+
+
+@media screen and (min-width: map-get($breakpoint, Tablet)) and (max-width:1023px) {
+  .user_header {
+    width: calc(100vw - 100px);
+    height: 50px;
+    background-color: #111114;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-around;
+    margin-left: 100px;
+    position: fixed;
+    z-index: 200;
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: white;
+      margin-right: 50px;
+    }
+  }
+
+  .user_main {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/home-background.png");
+
+    overflow-y: scroll;
+
+    /* 
+    DEbut de aside
+    */
+   
+   
+    /* 
+Debut du Srolling
+*/
+
+    .Srolling {
+      width: calc(100vw - 100px);
+      height: calc(400vh - 80px);
+      background-color:transparent;
+      margin-top: 52px;
+      margin-left: 100px;
+      color: white;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+   /* 
+Debut du slider
+*/
+
+
+
+    /* 
+Debut du Viewers
+*/
+
+   
+
+
+/* 
+    DEbut de Recommends
+    */
+.gridRecommend{
+  // background-color: red;
+  width: 100%;
+  height: 200vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+}
+
+
+}
+
+@media screen and  (max-width:map-get($breakpoint, Mobile)) {
+
+  .user_header {
+    width: calc(100vw - 100px);
+    height: 50px;
+    background-color: #111114;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-around;
+    margin-left: 100px;
+    position: fixed;
+    z-index: 200;
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: white;
+      margin-right: 50px;
+    }
+  }
+
+  .user_main {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/home-background.png");
+
+    overflow-y: scroll;
+
+    /* 
+    DEbut de aside
+    */
+   
+   
+    /* 
+Debut du Srolling
+*/
+
+    .Srolling {
+      width: calc(100vw - 100px);
+      height: calc(400vh - 80px);
+      background-color:transparent;
+      margin-top: 52px;
+      margin-left: 100px;
+      color: white;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+   /* 
+Debut du slider
+*/
+
+
+
+    /* 
+Debut du Viewers
+*/
+
+   
+
+
+/* 
+    DEbut de Recommends
+    */
+.gridRecommend{
+  // background-color: red;
+  width: 100%;
+  height: 200vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+}
+
+
+
+
+}
