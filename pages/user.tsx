@@ -1,11 +1,17 @@
-import React from "react";
+import React,{useState} from "react";
 import Head from "next/head";
 import Aside from "../components/layout/Asides";
 import Header from "../components/layout/Header";
 import Scrolling from "../components/molecule/Scrolling";
+import AsideForMobile from "../components/atom/asideFormobile";
+
 
 function User() {
-  return (
+
+  const asides=(typeof window !== 'undefined') && (screen.width <=575 )?<AsideForMobile/>:<Aside/>
+
+
+return (
     <>
       <Head>
         <title>User</title>
@@ -15,7 +21,7 @@ function User() {
       </Head>
       <Header />
       <main className="user_main">
-        <Aside />
+      {asides}  
         <Scrolling />
       </main>
     </>

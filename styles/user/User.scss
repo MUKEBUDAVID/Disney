@@ -29,7 +29,6 @@
     width: 100vw;
     height: 100vh;
     background-image: url("/home-background.png");
-
     overflow-y: scroll;
 
     /* 
@@ -194,7 +193,9 @@ Debut du Viewers
   .user_main {
     width: 100vw;
     height: 100vh;
-    background-image: url("/home-background.png");
+    // background-image: url("/home-background.png");
+    background-color: red;
+
 
     overflow-y: scroll;
 

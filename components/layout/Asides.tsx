@@ -6,23 +6,7 @@ function Asides() {
   const [animationFade, setanimationFade] = useState("");
   const [isvisible, setisvisible] = useState(false);
   const [idOmbre, setidOmbre] = useState("");
-  const [resolution,setresolution]=useState(0);
-
-
-  
-setInterval(()=>{
-
- if(typeof window !== 'undefined'){
-  if (screen.width ===900) {
-      //  getResolution();
-      setresolution(screen.width)
-
-      console.log(resolution);
-      
-  }
- }
-
-},100)
+ 
 
  
   const handeleOver = (e: MouseEvent) => {
@@ -102,6 +86,7 @@ setInterval(()=>{
     },
   ];
 
+  
   return (
     <aside className="user_aside">
       <img src="./logo.svg" alt="logo_Disney" />
@@ -134,7 +119,8 @@ setInterval(()=>{
         </ol>
       </nav>
     </aside>
-  );
+  )
+
 }
 
 export default Asides;
