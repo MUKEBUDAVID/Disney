@@ -59,7 +59,7 @@
 
 }
 
-@media screen and (min-width: map-get($breakpoint, Tablet)) and (max-width:1023px) {
+@media screen and (min-width: map-get($breakpoint, Min-Tablet)) and (max-width:map-get($breakpoint,Max-Tablet)) {
   .Viewers {
       width: 85vw;
       height: 120px;

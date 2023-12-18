@@ -85,7 +85,7 @@ Debut du Viewers
 }
 
 
-@media screen and (min-width: map-get($breakpoint, Tablet)) and (max-width:1023px) {
+@media screen and (min-width: map-get($breakpoint, Min-Tablet)) and (max-width:map-get($breakpoint,Max-Tablet)) {
   .user_header {
     width: calc(100vw - 100px);
     height: 50px;
@@ -167,17 +167,19 @@ Debut du Viewers
 
 }
 
+
+
+
 @media screen and  (max-width:map-get($breakpoint, Mobile)) {
 
   .user_header {
-    width: calc(100vw - 100px);
+    width: 100vw ;
     height: 50px;
     background-color: #111114;
     display: flex;
     flex-direction: column;
     align-items: end;
     justify-content: space-around;
-    margin-left: 100px;
     position: fixed;
     z-index: 200;
 
@@ -193,11 +195,9 @@ Debut du Viewers
   .user_main {
     width: 100vw;
     height: 100vh;
-    // background-image: url("/home-background.png");
-    background-color: red;
-
-
-    overflow-y: scroll;
+    background-image: url("/home-background.png");
+   
+ overflow-y: scroll;
 
     /* 
     DEbut de aside
@@ -209,11 +209,10 @@ Debut du Srolling
 */
 
     .Srolling {
-      width: calc(100vw - 100px);
+      width: 100vw ;
       height: calc(400vh - 80px);
       background-color:transparent;
-      margin-top: 52px;
-      margin-left: 100px;
+      margin-top: 22px;
       color: white;
       display: flex;
       align-items: center;

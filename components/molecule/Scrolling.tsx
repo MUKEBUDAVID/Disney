@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import Slider from "../atom/Slide";
 import Viewers from "../atom/Viewers";

@@ -42,7 +42,7 @@
 
 }
 
-@media screen and (min-width: map-get($breakpoint, Tablet)) and (max-width:1023px) {
+@media screen and (min-width: map-get($breakpoint, Min-Tablet)) and (max-width:map-get($breakpoint,Max-Tablet)){
 
   .recommend{
       width: 90%;

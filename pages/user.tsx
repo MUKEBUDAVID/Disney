@@ -1,14 +1,25 @@
-import React,{useState} from "react";
+"use client"
+import React, { ReactNode, useEffect, useState } from "react";
 import Head from "next/head";
 import Aside from "../components/layout/Asides";
 import Header from "../components/layout/Header";
 import Scrolling from "../components/molecule/Scrolling";
-import AsideForMobile from "../components/atom/asideFormobile";
+import AsideForMobile from "../components/atom/AsideForMobile";
 
 
 function User() {
 
-  const asides=(typeof window !== 'undefined') && (screen.width <=575 )?<AsideForMobile/>:<Aside/>
+  const [asides,setasides]=useState<ReactNode>(); 
+  const [headers,setheaders]=useState<ReactNode>(); 
+
+  const aside=(typeof window !== 'undefined') && (screen.width <=425 )?<AsideForMobile/>:<Aside/>;
+  const header=((typeof window !== 'undefined') && (screen.width <=425 ))?null:<Header />
+
+useEffect(()=>{
+  setasides(aside);
+  setheaders(header)
+},[aside,header])
+
 
 
 return (
@@ -19,7 +30,7 @@ return (
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
+    {  headers}
       <main className="user_main">
       {asides}  
         <Scrolling />

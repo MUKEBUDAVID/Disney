@@ -1,6 +1,7 @@
+"use client"
 import React, { MouseEvent, useEffect, useState } from "react";
 import ListAside from "../molecule/ListAside";
-import { setInterval } from "timers";
+
 
 function Asides() {
   const [animationFade, setanimationFade] = useState("");

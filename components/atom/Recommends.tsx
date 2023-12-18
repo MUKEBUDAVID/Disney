@@ -21,7 +21,7 @@ function Recommends({title}:RecommendProps) {
     initialSlide: 0,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 769,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
@@ -30,15 +30,15 @@ function Recommends({title}:RecommendProps) {
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 768,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 7,
+          slidesToScroll: 7,
           initialSlide: 2
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 425,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
