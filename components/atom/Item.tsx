@@ -6,8 +6,7 @@ type ListProps = PropsWithChildren<{
   hreF: any;
   pathSvg:ReactElement;
   setvisibleSousMenu?:Function
-  
-}>;
+  }>;
 
 
 function Item({ hreF,pathSvg,setvisibleSousMenu,children}: ListProps) {

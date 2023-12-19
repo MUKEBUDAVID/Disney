@@ -14,11 +14,12 @@ function Recommends({title}:RecommendProps) {
 
   const settings = {
     dots: true,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 7,
     slidesToScroll: 7,
     initialSlide: 0,
+    autoplay: true,
     responsive: [
       {
         breakpoint: 769,
@@ -40,8 +41,8 @@ function Recommends({title}:RecommendProps) {
       {
         breakpoint: 425,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToShow: 4,
+          slidesToScroll: 4
         }
       }
     ]

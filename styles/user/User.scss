@@ -182,6 +182,7 @@ Debut du Viewers
     justify-content: space-around;
     position: fixed;
     z-index: 200;
+   
 
     .avatar {
       width: 40px;
@@ -197,7 +198,7 @@ Debut du Viewers
     height: 100vh;
     background-image: url("/home-background.png");
    
- overflow-y: scroll;
+    overflow-y: scroll;
 
     /* 
     DEbut de aside
@@ -210,8 +211,8 @@ Debut du Srolling
 
     .Srolling {
       width: 100vw ;
-      height: calc(400vh - 80px);
-      background-color:transparent;
+      height: calc(410vh - 80px);
+      // background-color:yellow;
       margin-top: 22px;
       color: white;
       display: flex;
@@ -243,6 +244,7 @@ Debut du Viewers
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  margin-top: 270px;
 }
 
 

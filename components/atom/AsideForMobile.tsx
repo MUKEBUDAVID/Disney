@@ -4,8 +4,7 @@ import Item from "./Item";
 import SousItem from "./SousItem";
 
 function AsideForMobile() {
-  const [visibleSousMenu,setvisibleSousMenu] =useState("visibleSousMenuNot");
-
+  const [visibleSousMenu, setvisibleSousMenu] = useState("visibleSousMenuNot");
 
   const list = [
     {
@@ -68,30 +67,25 @@ function AsideForMobile() {
     },
   ];
 
-  
-
-
-
   return (
     <nav className="AsideMobile">
-     
-       <Item hreF={list[0].href} pathSvg={list[0].Path}/>
-       
+      <Item hreF={list[0].href} pathSvg={list[0].Path} />
 
+      <Item
+        hreF={list[1].href}
+        pathSvg={list[1].Path}
+        setvisibleSousMenu={setvisibleSousMenu}
+      >
+        <nav className={visibleSousMenu}>
+          <SousItem hreF={"/movie"}>Movies</SousItem>
+          <SousItem hreF={"/serie"}>Série</SousItem>
+          <SousItem hreF={"/original"}>Originaux</SousItem>
+        </nav>
+      </Item>
 
-      <Item hreF={list[1].href} pathSvg={list[1].Path} setvisibleSousMenu={setvisibleSousMenu} >
-      <nav className={visibleSousMenu}>
-           <SousItem hreF={"/movie"}>Movies</SousItem>
-           <SousItem hreF={"/serie"}>Série</SousItem>
-           <SousItem hreF={"/original"}>Originaux</SousItem>
-            </nav>
-        </Item>      
-       
-
-       <Link href={"#"} className="item">
-            {/* <img src="" alt="" srcset="" /> */}
-        </Link>
-      
+      <Link href={"#"} className="item">
+        {/* <img src="" alt="" srcset="" /> */}
+      </Link>
     </nav>
   );
 }

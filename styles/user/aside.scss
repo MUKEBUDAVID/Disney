@@ -395,11 +395,11 @@
     color: white;
     margin-top: 91vh;
     background-color: rgb(2, 2, 2);
-    opacity: 0.5;
     list-style: none;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    z-index: 400;
   }
 
   .item {
@@ -452,7 +452,6 @@
   }
 
   .item:last-child {
-    // margin-right: 20%;
     border-radius: 50%;
     display: flex;
     align-items: center;
