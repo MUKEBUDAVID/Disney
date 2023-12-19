@@ -395,6 +395,7 @@
     color: white;
     margin-top: 91vh;
     background-color: rgb(2, 2, 2);
+    opacity: 0.5;
     list-style: none;
     flex-direction: row;
     justify-content: space-around;
@@ -449,6 +450,7 @@
     background-color: white;
     transform: translateX(15px);
   }
+
   .item:last-child {
     // margin-right: 20%;
     border-radius: 50%;
@@ -470,6 +472,9 @@
       transform: scale(1.2);
     }
   }
+  #sousItemAcitve{
+    border-bottom: 2px white solid;
+   }
 
   #SvgActive {
     fill: white;
@@ -477,4 +482,5 @@
     border: 0 solid #e5e7eb;
     opacity: 1;
   }
+ 
 }

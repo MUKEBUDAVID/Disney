@@ -1,4 +1,4 @@
-import React, { useState, PropsWithChildren, ReactElement, useEffect, MouseEventHandler } from "react";
+import React, { useState, PropsWithChildren, ReactElement, useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 

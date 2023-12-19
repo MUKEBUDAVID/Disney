@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import Item from "./Item";
+import SousItem from "./SousItem";
 
 function AsideForMobile() {
   const [visibleSousMenu,setvisibleSousMenu] =useState("visibleSousMenuNot");
@@ -80,10 +81,10 @@ function AsideForMobile() {
 
       <Item hreF={list[1].href} pathSvg={list[1].Path} setvisibleSousMenu={setvisibleSousMenu} >
       <nav className={visibleSousMenu}>
-            <Link href={"/movie"}>Movies</Link>
-            <Link href={"/serie"}>Série</Link>
-            <Link href={"/original"}>Originaux</Link>
-          </nav>
+           <SousItem hreF={"/movie"}>Movies</SousItem>
+           <SousItem hreF={"/serie"}>Série</SousItem>
+           <SousItem hreF={"/original"}>Originaux</SousItem>
+            </nav>
         </Item>      
        
 
