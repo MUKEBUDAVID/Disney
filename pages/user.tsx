@@ -10,15 +10,30 @@ import AsideForMobile from "../components/atom/AsideForMobile";
 function User() {
 
   const [asides,setasides]=useState<ReactNode>(); 
-  const [headers,setheaders]=useState<ReactNode>(); 
+  const [headers,setheaders]=useState<ReactNode>(Header); 
+  const [screens,setscreens]=useState<Number>(); 
 
   const aside=(typeof window !== 'undefined') && (screen.width <=425 )?<AsideForMobile/>:<Aside/>;
   const header=((typeof window !== 'undefined') && (screen.width <=425 ))?null:<Header />
 
 useEffect(()=>{
   setasides(aside);
-  setheaders(header)
-},[aside,header])
+  setheaders(header);
+
+
+const timer=setInterval(()=>{
+    if (screen.width <=425 || screen.width) {
+      setscreens(screen.width)
+    }
+  },1000)
+return()=>{
+clearInterval(timer)
+
+}
+
+},[screens])
+
+
 
 
 

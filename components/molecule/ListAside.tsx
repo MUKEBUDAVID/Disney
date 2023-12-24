@@ -37,7 +37,7 @@ const{handeleOver}=methode;
   <svg xmlns="http://www.w3.org/2000/svg" className={"NavSvg"} id={svgActive} fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" >
 {children}
   </svg>
-          <Navlink hreF={href} animationFades={animationFade} setsvgActive={setsvgActive}  varclas={[varclass,setvarclass]} >{titles}</Navlink>
+          <Navlink hreF={href} animationFades={animationFade} key={index} setsvgActive={setsvgActive}  varclas={[varclass,setvarclass]} >{titles}</Navlink>
         </li>
 
   )

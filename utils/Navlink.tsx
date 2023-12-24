@@ -16,8 +16,6 @@ function Navlink({ hreF, animationFades, varclas,setsvgActive, children }: NavLi
 
     if (pathname === hreF) {
       setvarclass("active");
-    
-     
      
       setsvgActive("SvgActive")
 

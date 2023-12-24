@@ -1,6 +1,7 @@
 @import "./variable";
 @import "./App";
 @import "./user/User.scss";
+@import "./series/Serie.scss";
 
 
 
@@ -13,7 +14,7 @@
   body {
     width: 100vw;
     height:100vh;
-    background: #080808;
+    // background: #080808;
     font-family: Avenir-Roman, sans-serif;
     overflow: hidden; 
     // color: white;
