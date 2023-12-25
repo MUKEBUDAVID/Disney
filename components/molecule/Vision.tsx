@@ -1,12 +1,30 @@
-import React, { useState } from "react";
+import React, { PropsWithChildren, useState } from "react";
+import Recommends from "../atom/Recommends";
 
-function Vision() {
+
+type metadataprops=PropsWithChildren<{
+  metaData:Array<{
+    title:string,
+    data:Array<{
+      src:string,
+      alt:string
+
+    }>
+  }>
+}>;
+
+function Vision({metaData}:metadataprops) {
   const[banniers,setbanniers]=useState("./onepeance.webp");
+  // stroke="currentColor"
+ 
+
+  
+
 
   return (
     <>
       <div className="imgContainere">
-        <img src={banniers} alt="bannier" className="bannier" />
+        <img src={banniers} alt="bannier" className="bannier"  />
       </div>
 
       <section className="vision">
@@ -30,7 +48,7 @@ function Vision() {
               explores the nation he once served.
             </p>
 
-            <div>
+            <div className="follow">
 
               <button>
                 <svg
@@ -38,8 +56,9 @@ function Vision() {
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
-                  stroke="currentColor"
+                  
                   aria-hidden="true"
+                  
                 >
                   <path
                     stroke-linecap="round"
@@ -49,12 +68,31 @@ function Vision() {
                 </svg>
                 <span>Watch Now</span>
               </button>
+
               <button>+</button>
             </div>
+
           </div>
         </div>
 
-        <div className="grid_movie">papa</div>
+        <div className="grid_movie">
+      {
+        metaData.map((donne,index)=>{
+        return(
+          <Recommends key={index} data={donne.data} title={donne.title} />
+
+        )
+
+        })
+      }
+
+
+      
+
+       
+
+
+        </div>
       </section>
     </>
   );

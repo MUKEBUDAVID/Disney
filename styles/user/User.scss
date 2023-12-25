@@ -1,7 +1,7 @@
 @import"./aside.scss";
 @import"./slider.scss";
 @import"./viewers.scss";
-@import "./recommend.scss";
+@import "../recommend.scss";
 
 @media screen and (min-width: map-get($breakpoint, Desktop)) {
   .user_header {

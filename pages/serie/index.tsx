@@ -28,6 +28,303 @@ setInterval(()=>{
   }
 },100)
 
+const metaData=[{
+  title:"Trending Series",
+  data:[{
+    src:"./foot.webp",
+    alt:"david",
+   
+},
+  {
+    src:"./foot.webp",
+    alt:"david",
+    
+       
+  },{
+    src:"./foot.webp",
+    alt:"david",
+   
+  },{
+    src:"./foot.webp",
+    alt:"david",
+    
+  },{
+    src:"./foot.webp",
+    alt:"david",
+   
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },
+  
+  ]
+},
+{
+  title:"Popular Series",
+  data:[{
+    src:"./foot.webp",
+    alt:"david",
+   
+},
+  {
+    src:"./foot.webp",
+    alt:"david",
+    
+       
+  },{
+    src:"./foot.webp",
+    alt:"david",
+   
+  },{
+    src:"./foot.webp",
+    alt:"david",
+    
+  },{
+    src:"./foot.webp",
+    alt:"david",
+   
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },
+  
+  ]
+},
+
+{
+  title:"Top Rated Series",
+  data:[{
+    src:"./foot.webp",
+    alt:"david",
+   
+},
+  {
+    src:"./foot.webp",
+    alt:"david",
+    
+       
+  },{
+    src:"./foot.webp",
+    alt:"david",
+   
+  },{
+    src:"./foot.webp",
+    alt:"david",
+  
+     },{
+    src:"./foot.webp",
+    alt:"david",
+   
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },
+  
+  ]
+},
+
+{
+  title:"Live Now",
+  data:[{
+    src:"./foot.webp",
+    alt:"david",
+   
+},
+  {
+    src:"./foot.webp",
+    alt:"david",
+    
+       
+  },{
+    src:"./foot.webp",
+    alt:"david",
+   
+  },{
+    src:"./foot.webp",
+    alt:"david",
+    
+  },{
+    src:"./foot.webp",
+    alt:"david",
+   
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },
+  
+  ]
+},
+
+{
+  title:"New Episodes",
+  data:[{
+    src:"./foot.webp",
+    alt:"david",
+   
+},
+  {
+    src:"./foot.webp",
+    alt:"david",
+    
+       
+  },{
+    src:"./foot.webp",
+    alt:"david",
+   
+  },{
+    src:"./foot.webp",
+    alt:"david",
+    
+  },{
+    src:"./foot.webp",
+    alt:"david",
+   
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },
+  
+  ]
+},
+
+]
+
+
 
 
 
@@ -42,9 +339,9 @@ setInterval(()=>{
    
 <main className="serie_main">
  {asides}
-  <Vision/>
-
-    </main>
+ 
+  <Vision metaData={metaData}/>
+  </main>
   </>
   )
 }

@@ -6,6 +6,60 @@ import Recommends from "../atom/Recommends";
 
 
 function Srolling() {
+
+  const data=[{
+    src:"./foot.webp",
+    alt:"david",
+    
+  },
+  {
+    src:"./foot.webp",
+    alt:"david",
+    
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },{
+    src:"./foot.webp",
+    alt:"david"
+  },
+  
+  ]
+
+
   return (
     <section className="Srolling">
       <Slider />
@@ -13,17 +67,17 @@ function Srolling() {
       <Viewers />
 
       <div className="gridRecommend">
-        <Recommends title={"Disney Originals"} />
+        <Recommends data={data} title={"Disney Originals"} />
 
-        <Recommends title={"Popular Movies"} />
+        <Recommends data={data} title={"Popular Movies"} />
 
-        <Recommends title={"Popular Series"} />
+        <Recommends data={data} title={"Popular Series"} />
 
-        <Recommends title={"New to Disney+"} />
+        <Recommends data={data} title={"New to Disney+"} />
 
-        <Recommends title={"Featured Marvel"} />
+        <Recommends data={data} title={"Featured Marvel"} />
 
-        <Recommends title={"Best of Pixar"} />
+        <Recommends data={data} title={"Best of Pixar"} />
       </div>
     </section>
   );

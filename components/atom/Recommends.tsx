@@ -5,11 +5,14 @@ import { LazyLoadImage}from "react-lazy-load-image-component";
 
 
 type RecommendProps=PropsWithChildren<{
-  title:String,
+  data:Array<{src:string,alt:string}>,
+  title:string,
+  key:number
+
 }>
 
 
-function Recommends({title}:RecommendProps) {
+function Recommends({key,title,data}:RecommendProps) {
  
 
   const settings = {
@@ -48,65 +51,15 @@ function Recommends({title}:RecommendProps) {
     ]
   };
 
-const test=[{
-  src:"./foot.webp",
-  alt:"david",
-  
-},
-{
-  src:"./foot.webp",
-  alt:"david",
-  
-},{
-  src:"./foot.webp",
-  alt:"david"
-},{
-  src:"./foot.webp",
-  alt:"david"
-},{
-  src:"./foot.webp",
-  alt:"david"
-},{
-  src:"./foot.webp",
-  alt:"david"
-},{
-  src:"./foot.webp",
-  alt:"david"
-},{
-  src:"./foot.webp",
-  alt:"david"
-},{
-  src:"./foot.webp",
-  alt:"david"
-},{
-  src:"./foot.webp",
-  alt:"david"
-},{
-  src:"./foot.webp",
-  alt:"david"
-},{
-  src:"./foot.webp",
-  alt:"david"
-},{
-  src:"./foot.webp",
-  alt:"david"
-},{
-  src:"./foot.webp",
-  alt:"david"
-},{
-  src:"./foot.webp",
-  alt:"david"
-},
 
-]
 
   return (
-    <section className="recommend">
+    <section className="recommend" key={key}>
      <div>        
       <h2> {title}</h2>
         <Slider {...settings}>
           {
-          test.map((image,index)=>{
+          data.map((image,index)=>{
             return(
               <div>
                 <LazyLoadImage
