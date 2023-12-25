@@ -62,12 +62,13 @@ function Recommends({key,title,data}:RecommendProps) {
           data.map((image,index)=>{
             return(
               <div>
-                <LazyLoadImage
+                {/* <LazyLoadImage
                 src={image.src}
                 alt={image.alt}
                 effect="blur"
                 key={index}
-                />
+                /> */}
+                <img src={image.src} alt={image.alt} key={index} />
             </div>
             )
           })  

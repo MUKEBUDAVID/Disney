@@ -1,5 +1,7 @@
 @import "../recommend.scss";
 @import "../vision.scss";
+@import"../aside.scss";
+
 
 @media screen and (min-width: map-get($breakpoint, Desktop)) {
     .movie_main {
