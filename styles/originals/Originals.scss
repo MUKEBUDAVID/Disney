@@ -1,5 +1,7 @@
-
-
+@import "../recommend.scss";
+@import "../vision.scss";
+@import"../aside.scss";
+        
 
 @media screen and (min-width: map-get($breakpoint, Desktop)) {
     .originals_main {
@@ -7,12 +9,10 @@
         height: 100vh;
         // background-image: url("/home-background.png");
         overflow-y: scroll;
-        // overflow-x: hidden;
+
+        overflow-x: hidden;
         color:white;
 
-        @import "../recommend.scss";
-        @import "../vision.scss";
-        @import"../aside.scss";
         
     
 }

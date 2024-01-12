@@ -12,17 +12,23 @@ function Original() {
   const aside=(typeof window !== 'undefined') && (screen.width <=425 )?<AsideForMobile/>:<Aside/>;
   
 
-useEffect(()=>{
-  setasides(aside);
+  useEffect(()=>{
+    setasides(aside);
   
-},[screens])
-
-
-setInterval(()=>{
-  if (screen.width <=425 || screen.width) {
-    setscreens(screen.width)
-  }
-},100)
+    const timer=setInterval(()=>{
+  
+      if (screen.width <=425 || screen.width) {
+        setscreens(screen.width)
+      }
+    },100)
+  
+    return()=>{
+      clearInterval(timer)
+      
+      }
+    
+  },[screens])
+  
 const metaData=[{
   title:"Featured",
   data:[{

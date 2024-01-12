@@ -1,7 +1,6 @@
 import React,{ReactNode,useState,useEffect} from "react";
 import Head from "next/head";
 import Aside from "../../components/layout/Asides";
-import Header from "../../components/layout/Header";
 import AsideForMobile from "../../components/atom/AsideForMobile";
 import Vision from "../../components/molecule/Vision";
 
@@ -10,23 +9,31 @@ import Vision from "../../components/molecule/Vision";
 function Series() {
 
   const [asides,setasides]=useState<ReactNode>(); 
-  const [headers,setheaders]=useState<ReactNode>(Header); 
+  
   const [screens,setscreens]=useState<Number>(); 
 
   const aside=(typeof window !== 'undefined') && (screen.width <=425 )?<AsideForMobile/>:<Aside/>;
-  const header=((typeof window !== 'undefined') && (screen.width <=425 ))?null:<Header />
+  
 
 useEffect(()=>{
   setasides(aside);
-  setheaders(header)
+
+  const timer=setInterval(()=>{
+
+    if (screen.width <=425 || screen.width) {
+      setscreens(screen.width)
+    }
+  },100)
+
+  return()=>{
+    clearInterval(timer)
+    
+    }
+  
 },[screens])
 
 
-setInterval(()=>{
-  if (screen.width <=425 || screen.width) {
-    setscreens(screen.width)
-  }
-},100)
+
 
 const metaData=[{
   title:"Trending Series",
